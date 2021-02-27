@@ -44,7 +44,7 @@ entity top is
 		n_blank		:	OUT	STD_LOGIC;	--direct blacking output to DAC
 		n_sync		:	OUT	STD_LOGIC; 	--sync-on-green output to DAC
 		vga_clk		: 	out	std_logic;	--CLK output
-	   r,g,b   		: out std_logic_vector(7 downto 0) := (others => '0')
+	    r,g,b   		: out std_logic_vector(7 downto 0) := (others => '0')
 	);
 end entity;
 
@@ -72,16 +72,14 @@ signal char_bit_x_pos 	: integer 	:= 0;
 signal char_bit_y_pos 	: integer 	:= 0;
 signal char_x_pos 		: integer 	:= 0;
 signal char_y_pos 		: integer 	:= 0;
-signal pixOn				: std_LOGIC := '0';
+signal pixOn			: std_LOGIC := '0';
 
---test signals
-signal next_data_ena : std_logic := '0';
-signal current_data	: std_logic_vector(7 downto 0);
-signal next_data	: std_logic_vector(7 downto 0);
-signal addr_now : integer := char_x_pos;
-signal addr_next : integer := addr_now;
---signal test_data : integer := 48;
---signal r_w_addr : integer := 1;
+signal next_data_ena 	: std_logic := '0';
+signal current_data		: std_logic_vector(7 downto 0);
+signal next_data		: std_logic_vector(7 downto 0);
+signal addr_now 		: integer := char_x_pos;
+signal addr_next 		: integer := addr_now;
+
 
 -- components
 component soc_system is
